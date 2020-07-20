@@ -88,10 +88,10 @@ Notched 3x Devices (e.g. X, 11 Pro):
 
 Notched 2x Devices (e.g. XR, 11):
     Screen Height: 812
-    Main BG Portrait @2x: TODO
-    Main BG Landscape @2x: TODO
-    Prediction Bar BG Portrait @2x: TODO
-    Prediction Bar BG Landscape @2x: TODO
+    Main BG Portrait @2x: 828 x 604
+    Main BG Landscape @2x: 1792 x 342
+    Prediction Bar BG Portrait @2x: 828 x 90
+    Prediction Bar BG Landscape @2x: 1792 x 76
 
 Non-Notched 'Plus' Devices (e.g. 7 Plus, 8 Plus):
     Screen Height: 667
@@ -102,17 +102,17 @@ Non-Notched 'Plus' Devices (e.g. 7 Plus, 8 Plus):
 
 Non-Notched 2x Devices (e.g. 7, 8):
     Screen Height: 667
-    Main BG Portrait @2x: TODO
-    Main BG Landscape @2x: TODO
-    Prediction Bar BG Portrait @3x: TODO
-    Prediction Bar BG Landscape @3x: TODO
+    Main BG Portrait @2x: 750 x 432
+    Main BG Landscape @2x: 1334 x 328
+    Prediction Bar BG Portrait @2x: 750 x 88
+    Prediction Bar BG Landscape @2x: 1334 x 76
 
 Non-Notched Small 2x Devices (e.g. SE-1):
     Screen Height: 568
     Main BG Portrait @2x: 640 x 508
     Main BG Landscape @2x: 1136 x 404
-    Prediction Bar BG Portrait @3x: 640 x 76
-    Prediction Bar BG Landscape @3x: 1136 x 76
+    Prediction Bar BG Portrait @2x: 640 x 76
+    Prediction Bar BG Landscape @2x: 1136 x 76
 ```
 
 I will be putting together an example pack containing empty images for all of these sizes very soon.
@@ -199,3 +199,6 @@ Presets simply are a copy of the Laetus preferences file, so DO NOT include your
 However, these can be useful to provide alongside packaged themes to setup the user preferences in the way you are expecting (e.g. text colour, hide key caps, etc.)
 
 Presets are stored in ```/Library/Laetus/Presets```, and can be packaged as part of your deb file the same way traditional iOS themes are (e.g. for SnowBoard or other theming engines).
+
+## Thanks
+Thanks to [Tr1Fecta](https://twitter.com/FectaTr1) for helping with finding device image sizes
