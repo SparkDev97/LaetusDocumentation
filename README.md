@@ -4,7 +4,11 @@
 
 **Please Note: This document is a work in progress.**
 
+## Themes
+
 This documentation page details how to create themes for Laetus 3!
+
+Laetus themes are stored in ```/Library/Laetus/Themes```
 
 Laetus 3 supports three different types of themes:
 - Image Themes
@@ -49,4 +53,83 @@ KeyboardLettersKeyPlanePortrait-en_GB-812h.png
 KeyboardLettersKeyPlaneLandscape-en_GB-812h.png
 ```
 
+Images can be provided with a scale also (remember to scale the image appropriately for best results).
+```
+KeyboardLettersKeyPlanePortrait-en_GB-812h@3x.png
+```
 
+### Image Theme Format
+As with all Laetus themes, the theme should be a folder in ```/Library/Laetus/Themes```.
+Images of the theme must be stored in a sub-folder called ```Images```
+
+This GitHub repository includes an example theme showing the structure and some example images. However, the structure looks as follows:
+
+![Image Theme Structure](https://i.imgur.com/Ik3lSoM.png)
+
+Themes can then be packaged into a deb file the same way traditional iOS themes are (e.g. for SnowBoard or other theming engines).
+
+## HTML Themes
+HTML themes are essentially simply a web page shown behind the keyboard, but Laetus provides more power to this webview to make it more interesting. 
+
+An example of an HTML theme could be as simple as a HTML page (Named "index.html") like so:
+```
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0" />
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>
+```
+
+However, it is also possible to include css/js/other content from the same folder as your theme. Therefore, you can include a JavaScript file like so:
+```
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0" />
+        <script src="Example.js"></script>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>
+```
+
+### HTML Theme Javascript Callbacks
+Laetus provides some extra useful information to HTML themes via Javascript.
+All callbacks are option and do not need to be overriden in your theme.
+
+The callbacks are as follows:
+```
+laetusKeyPlaneDidChange(state) - Called when the keyboard becomes visible or the keyboards 'KeyPlane' changes. The possible states are: "Letters", "Numbers", "Emoji".
+
+laetusDictationViewWillShow() - Called when the dictation view appears
+laetusDictationViewWillHide() - Called when the dictation view disappears
+
+laetusDidTouchDown(x,y) - Called when the user taps on the keyboard. Provides the x,y position relative the view. (e.g. 0,0 for the top left).
+
+laetusCurrentLanguage(language) - Called when the keyboard becomes visible or when the language changes. Language is provided directly from the keyboard APIs and appears to always conform to the ISO language standard (e.g. en_GB). - More information here (https://en.wikipedia.org/wiki/Language_localisation), note that hyphens will be returned as underscores. 
+```
+
+An example of overriding one of these methods would look as follows, from the "Example.js" file:
+```
+function laetusKeyPlaneDidChange(keyplaneName)
+{
+    console.log("KeyPlane did change to: " + keyplaneName);
+}
+```
+
+### HTML Theme Format
+As with all Laetus themes, the theme should be a folder in ```/Library/Laetus/Themes```.
+Files for the theme must be stored in a sub-folder called ```HTML```
+
+This GitHub repository includes an example theme showing the structure and an example HTML theme. However, the structure looks as follows:
+
+![HTML Theme Structure](https://i.imgur.com/HhTYDDX.png)
+
+Themes can then be packaged into a deb file the same way traditional iOS themes are (e.g. for SnowBoard or other theming engines).
+
+## Hybrid Themes
+Laetus also supports using a combination of HTML and Images.
+To package a theme like this, simply include both ```Images``` and ```HTML``` sub-folders.
