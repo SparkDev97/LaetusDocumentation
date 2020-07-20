@@ -115,6 +115,7 @@ Non-Notched Small 2x Devices (e.g. SE-1):
     Prediction Bar BG Landscape @3x: TODO
 ```
 
+I will be putting together an example pack containing empty images for all of these sizes very soon.
 
 ### Image Theme Format
 As with all Laetus themes, the theme should be a folder in ```/Library/Laetus/Themes```.
