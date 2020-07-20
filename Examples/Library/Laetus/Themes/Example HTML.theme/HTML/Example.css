@@ -1,0 +1,72 @@
+body,html
+{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+.box
+{
+  height:100%;
+  width:100%;
+}
+
+.gradDynamic
+{
+  position:relative;
+}
+
+.gradDynamic:after, .gradDynamic:before
+{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  content:"";
+  z-index:-1;
+}
+
+.gradDynamic:after
+{
+  background:radial-gradient(circle,red,transparent);
+  background-size:400%;
+  animation:colorSpin 10s linear infinite;
+}
+
+.gradDynamic:before
+{
+  background-color:yellow;
+}
+
+@keyframes colorSpin
+{
+  25%{background-position:0 100%}
+  50%{background-position:100% 100%}
+  75%{background-position:100% 0}
+  100%{filter:hue-rotate(360deg)}
+}
+
+.ripple 
+{
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(170, 170, 170, 0.9);
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(0);
+}
+.rippleEffect 
+{
+    animation: rippleAnimation .7s linear;
+}
+
+@keyframes rippleAnimation 
+{
+  100% 
+  {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
