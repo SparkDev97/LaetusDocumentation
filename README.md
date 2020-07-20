@@ -156,7 +156,7 @@ However, it is also possible to include css/js/other content from the same folde
 
 ### HTML Theme Javascript Callbacks
 Laetus provides some extra useful information to HTML themes via Javascript.
-All callbacks are option and do not need to be overriden in your theme.
+All callbacks are option and do not need to be overridden in your theme.
 
 The callbacks are as follows:
 ```
