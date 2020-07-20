@@ -1,6 +1,6 @@
 # Laetus 3 Documentation ( WORK IN PROGRESS )
 
-![Laetus Icon](https://i.imgur.com/VLQ2Q0Y.png)
+<img src="https://i.imgur.com/VLQ2Q0Y.png" width="200">
 
 **Please Note: This document is a work in progress.**
 
