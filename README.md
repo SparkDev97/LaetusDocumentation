@@ -72,7 +72,7 @@ The best sizes will differ from device to device, particularly for the keyplanes
 I will be populating this section as I learn the best sizes for different screens:
 
 ```
-Notched Plus Devices (e.g. XS Max, 11 Pro Max):
+Notched 'Max' Devices (e.g. XS Max, 11 Pro Max):
     Screen Height: 896
     Main BG Portrait @3x: 1242 × 906
     Main BG Landscape @3x: 2688 × 513
@@ -81,10 +81,10 @@ Notched Plus Devices (e.g. XS Max, 11 Pro Max):
 
 Notched 3x Devices (e.g. X, 11 Pro):
     Screen Height: 812
-    Main BG Portrait @3x: TODO
-    Main BG Landscape @3x: TODO
-    Prediction Bar BG Portrait @3x: TODO
-    Prediction Bar BG Landscape @3x: TODO
+    Main BG Portrait @3x: 1125 x 876
+    Main BG Landscape @3x: 2436 x 627
+    Prediction Bar BG Portrait @3x: 1125 x 135
+    Prediction Bar BG Landscape @3x: 2436 x 114
 
 Notched 2x Devices (e.g. XR, 11):
     Screen Height: 812
@@ -93,7 +93,7 @@ Notched 2x Devices (e.g. XR, 11):
     Prediction Bar BG Portrait @2x: TODO
     Prediction Bar BG Landscape @2x: TODO
 
-Non-Notched Plus Devices (e.g. 7 Plus, 8 Plus):
+Non-Notched 'Plus' Devices (e.g. 7 Plus, 8 Plus):
     Screen Height: 667
     Main BG Portrait @3x: TODO
     Main BG Landscape @3x: TODO
@@ -109,8 +109,8 @@ Non-Notched 2x Devices (e.g. 7, 8):
 
 Non-Notched Small 2x Devices (e.g. SE-1):
     Screen Height: 568
-    Main BG Portrait @2x: 640 x 432
-    Main BG Landscape @2x: 1136 x 328
+    Main BG Portrait @2x: 640 x 508
+    Main BG Landscape @2x: 1136 x 404
     Prediction Bar BG Portrait @3x: 640 x 76
     Prediction Bar BG Landscape @3x: 1136 x 76
 ```
