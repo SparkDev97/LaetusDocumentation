@@ -66,6 +66,56 @@ Images can be provided with a scale also (remember to scale the image appropriat
 KeyboardLettersKeyPlanePortrait-en_GB-812h@3x.png
 ```
 
+### Image Theme Sizes
+The best sizes will differ from device to device, particularly for the keyplanes (Which may also differ across languages).
+
+I will be populating this section as I learn the best sizes for different screens:
+
+```
+Notched Plus Devices (e.g. XS Max, 11 Pro Max):
+    Screen Height: 896
+    Main BG Portrait @3x: 1242 × 903
+    Main BG Landscape @3x: 2688 × 516
+    Prediction Bar BG Portrait @3x: 1242 × 135
+    Prediction Bar BG Landscape @3x: 1986 × 114
+
+Notched 3x Devices (e.g. X, 11 Pro):
+    Screen Height: 812
+    Main BG Portrait @3x: TODO
+    Main BG Landscape @3x: TODO
+    Prediction Bar BG Portrait @3x: TODO
+    Prediction Bar BG Landscape @3x: TODO
+
+Notched 2x Devices (e.g. XR, 11):
+    Screen Height: 812
+    Main BG Portrait @2x: TODO
+    Main BG Landscape @2x: TODO
+    Prediction Bar BG Portrait @2x: TODO
+    Prediction Bar BG Landscape @2x: TODO
+
+Non-Notched Plus Devices (e.g. 7 Plus, 8 Plus):
+    Screen Height: 667
+    Main BG Portrait @3x: TODO
+    Main BG Landscape @3x: TODO
+    Prediction Bar BG Portrait @3x: TODO
+    Prediction Bar BG Landscape @3x: TODO
+
+Non-Notched 2x Devices (e.g. 7, 8):
+    Screen Height: 667
+    Main BG Portrait @2x: TODO
+    Main BG Landscape @2x: TODO
+    Prediction Bar BG Portrait @3x: TODO
+    Prediction Bar BG Landscape @3x: TODO
+
+Non-Notched Small 2x Devices (e.g. SE-1):
+    Screen Height: 568
+    Main BG Portrait @2x: TODO
+    Main BG Landscape @2x: TODO
+    Prediction Bar BG Portrait @3x: TODO
+    Prediction Bar BG Landscape @3x: TODO
+```
+
+
 ### Image Theme Format
 As with all Laetus themes, the theme should be a folder in ```/Library/Laetus/Themes```.
 Images of the theme must be stored in a sub-folder called ```Images```
