@@ -11,9 +11,9 @@ This documentation page details how to create themes for Laetus 3!
 Laetus themes are stored in ```/Library/Laetus/Themes```
 
 Laetus 3 supports three different types of themes:
-- Image Themes
-- HTML Themes
-- Hybrid Themes
+- [Image Themes](#image-themes)
+- [HTML Themes](#html-themes)
+- [Hybrid Themes](#hybrid-themes)
 
 ## Image Themes
 Image themes are simply themes constructed using purely images. These images need to be formatted in the correct way, both in size and in file name.
