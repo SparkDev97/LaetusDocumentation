@@ -74,8 +74,8 @@ I will be populating this section as I learn the best sizes for different screen
 ```
 Notched Plus Devices (e.g. XS Max, 11 Pro Max):
     Screen Height: 896
-    Main BG Portrait @3x: 1242 × 903
-    Main BG Landscape @3x: 2688 × 516
+    Main BG Portrait @3x: 1242 × 906
+    Main BG Landscape @3x: 2688 × 513
     Prediction Bar BG Portrait @3x: 1242 × 135
     Prediction Bar BG Landscape @3x: 1986 × 114
 
