@@ -109,10 +109,10 @@ Non-Notched 2x Devices (e.g. 7, 8):
 
 Non-Notched Small 2x Devices (e.g. SE-1):
     Screen Height: 568
-    Main BG Portrait @2x: TODO
-    Main BG Landscape @2x: TODO
-    Prediction Bar BG Portrait @3x: TODO
-    Prediction Bar BG Landscape @3x: TODO
+    Main BG Portrait @2x: 640 x 432
+    Main BG Landscape @2x: 1136 x 328
+    Prediction Bar BG Portrait @3x: 640 x 76
+    Prediction Bar BG Landscape @3x: 1136 x 76
 ```
 
 I will be putting together an example pack containing empty images for all of these sizes very soon.
