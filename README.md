@@ -11,7 +11,7 @@ This documentation page details how to create themes for Laetus 3!
 Laetus is temporarily only available to SparkDev Members or designers.
 If you are a known designer/web developer please contact me on my Discord server and I'll happily give you access.
 
-[Join SparkDev's Discord](https://discord.gg/UJ4dWPv);
+[Join SparkDev's Discord](https://discord.gg/UJ4dWPv)
 
 Laetus themes are stored in ```/Library/Laetus/Themes```
 
