@@ -133,3 +133,10 @@ Themes can then be packaged into a deb file the same way traditional iOS themes 
 ## Hybrid Themes
 Laetus also supports using a combination of HTML and Images.
 To package a theme like this, simply include both ```Images``` and ```HTML``` sub-folders.
+
+## Presets
+Presets can be used by both designers and users alike. To create a preset go to Laetus preferences > Presets > And tap the '+' button.
+Presets simply are a copy of the Laetus preferences file, so DO NOT include your theme and/or images.
+However, these can be useful to provide alongside packaged themes to setup the user preferences in the way you are expecting (e.g. text colour, hide key caps, etc.)
+
+Presets are stored in ```/Library/Laetus/Presets```, and can be packaged as part of your deb file the same way traditional iOS themes are (e.g. for SnowBoard or other theming engines).
