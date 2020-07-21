@@ -18,9 +18,10 @@ This documentation page details how to create themes for Laetus 3!
 
 Laetus themes are stored in ```/Library/Laetus/Themes```
 
-Laetus 3 supports three different types of themes:
+Laetus 3 supports several different types of themes:
 - [Image Themes](#image-themes)
 - [HTML Themes](#html-themes)
+- [Widget Themes](#widget-themes)
 - [Hybrid Themes](#hybrid-themes)
 
 ## Image Themes
@@ -189,9 +190,113 @@ This GitHub repository includes an example theme showing the structure and an ex
 
 Themes can then be packaged into a deb file the same way traditional iOS themes are (e.g. for SnowBoard or other theming engines).
 
+## Widget Themes
+If you have any experience with objective-c/tweak development, it's super easy to get started with Laetus Widgets. Let's get going!
+
+#### Pre-Requirements
+```
+Laetus >= 3.0.0 (Available from: https://sparkdev.me)
+```
+
+### Simple Implementation
+
+Included in this git is a 'LaetusWidgetTemplate' which contains a fully compilable template of a simple Laetus widget.
+
+The template simply displays a red background, so take a look at this. For the easiest experience, build your widgets starting from this template.
+
+Laetus widgets must conform to the 'LaetusWidget' protocol. This is included in the 'LaetusWidgetProtocol.h' API header file.
+
+```
+// This is the protocol that your Laetus widget class must conform to
+@protocol LaetusWidgetProtocol <NSObject>
+
+@required
+// Setup your content view and set the frame. (Note this could change via setFrame on the content view).
+-(void) setupWithFrame:(CGRect) frame;
+// Return the contentview (Return NULL if not setup).
+-(UIView*) contentView;
+// Destroy the contentview. Make sure after this that the above function returns NULL.
+-(void) destroyContentView;
+
+@optional
+// When a touch is detected, it will be passed to this function and provided via 'point'.
+-(void) receiveTouchAtPoint:(CGPoint) point;
+// Called when the keyplane changes. Can either be: @"Letters" or @"Numbers" or @"Emoji".
+-(void) keyPlaneDidChange:(NSString*) keyPlaneName;
+// Called when the keyplane changes. This is the raw value used by iOS internally, so may give more information.
+-(void) rawKeyPlaneDidChange:(NSString*) keyPlaneName;
+// Called when the language changes. Language is provided directly from the keyboard APIs and appears to always conform to the ISO language standard (e.g. en_GB). - More information here (https://en.wikipedia.org/wiki/Language_localisation), note that hyphens will be returned as underscores. 
+-(void) updateCurrentLanguage:(NSString*) language;
+// Called when the dictation view shows.
+-(void) dictationViewWillShow;
+// Called when the dication view hides.
+-(void) dictationViewWillHide;
+@end
+```
+This protocol may be expanded to provide more information in future Laetus updates.
+
+A quick example of a class that would conform to this protocol would be as follows:
+```
+#import "LaetusWidgetProtocol.h"
+
+@interface LaetusWidgetTemplate : NSObject <LaetusWidgetProtocol>
+@property (nonatomic, retain) UIView* contentView;
+@end
+
+@implementation LaetusWidgetTemplate
+    -(void)setupWithFrame:(CGRect) frame
+    {
+        if(self.contentView == NULL)
+        {
+            self.contentView = [[UIView alloc] initWithFrame: frame];
+        }
+
+        [self.contentView setFrame: frame];
+        self.contentView.backgroundColor = [UIColor redColor];
+    }
+
+    -(void) destroyContentView
+    {
+        if(self.contentView)
+        {
+            [self.contentView removeFromSuperview];
+            self.contentView = NULL;
+        }
+    }
+@end
+```
+
+Once you have a class that conforms to the Laetus widget protocol, you need an Info.plist file to tell Laetus about your widget.
+This is formatted like so:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>CFBundleIdentifier</key>
+        <string>com.spark.laetus.widgettemplate</string>
+
+        <key>CFBundleDisplayName</key>
+        <string>Laetus Widget Template</string>
+       
+        <key>LaetusWidgetClass</key>
+        <string>LaetusWidgetTemplate</string>
+        
+        <key>LaetusWidgetsVersion</key>
+        <integer>1</integer>
+    </dict>
+</plist>
+```
+
+This Info.plist file but be in your bundle alongside the binary, so see the 'Makefile' in the template if you do not know how to copy this over.
+Your widget bundle file must then be placed in **"/Library/Laetus/Themes"** for Laetus to find it, this is also covered in the 'Makefile'.
+
+Once your Widget is built and has the Info.plist file, it will be available in the Laetus widgets selector and you're done!
+
 ## Hybrid Themes
-Laetus also supports using a combination of HTML and Images.
+Laetus also supports using a combination themes.
 To package a theme like this, simply include both ```Images``` and ```HTML``` sub-folders.
+Widget themes can also include some specific images from ```Images``` themes in it's bundle.
 
 ## Presets
 Presets can be used by both designers and users alike. To create a preset go to Laetus preferences > Presets > And tap the '+' button.

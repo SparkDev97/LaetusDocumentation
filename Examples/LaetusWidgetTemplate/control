@@ -1,0 +1,9 @@
+Package: com.spark.laetus.widgettemplate
+Name: Laetus Widget Template
+Depends: mobilesubstrate, com.spark.laetus (>> 2.5.0)
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Test Laetus widget
+Maintainer: Spark
+Author: Author
+Section: Tweaks
