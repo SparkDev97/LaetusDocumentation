@@ -9,7 +9,7 @@
 This documentation page details how to create themes for Laetus 3!
 
 **Laetus is temporarily only available to SparkDev Members or designers.**
-**If you are a known designer/developer please contact me on my Discord server and I'll happily give you access.**
+**If you are a designer/developer please contact me on my Discord server and I'll happily give you access.**
 
 **[Join SparkDev's Discord](https://discord.gg/UJ4dWPv)**
 
