@@ -33,11 +33,13 @@ Full list of possible file names:
 ```
 KeyboardMainBG - This image is used as the background behind the keys.
 KeyboardNumbersBG - This image is used as the background behind the number keys (If not provided KeyboardMainBG is used).
+KeyboardNumberPadBG - This image is used as the background behind the number pad (If not provided KeyboardMainBG is used).
 KeyboardEmojiBG - This image is used as the background behind the emoji keys (If not provided KeyboardMainBG is used).
 KeyboardDictationBG - This image is used as the background behind the dictation keys (If not provided KeyboardMainBG is used).
 KeyboardPredictionBarBG - This image is used as the background behind the prediction keys.
 KeyboardLettersKeyPlane - This image is used on the letters screen, above the background (The backgrounds behind the key letters).
 KeyboardNumbersKeyPlane - This image is used on the numbers screen, above the background (The backgrounds behind the key letters).
+KeyboardNumberPadKeyPlane - This image is used on the number pad screen, above the background (The backgrounds behind the key letters).
 KeyboardPressedKeyCap - This image is used behind the key popup when tapping on a key (Experimental).
 ```
 
@@ -162,7 +164,7 @@ All callbacks are option and do not need to be overridden in your theme.
 
 The callbacks are as follows:
 ```
-laetusKeyPlaneDidChange(state) - Called when the keyboard becomes visible or the keyboards 'KeyPlane' changes. The possible states are: "Letters", "Numbers", "Emoji".
+laetusKeyPlaneDidChange(state) - Called when the keyboard becomes visible or the keyboards 'KeyPlane' changes. The possible states are: "Letters", "Numbers", "Emoji", "NumberPad".
 
 laetusDictationViewWillShow() - Called when the dictation view appears
 laetusDictationViewWillHide() - Called when the dictation view disappears
@@ -221,7 +223,7 @@ Laetus widgets must conform to the 'LaetusWidget' protocol. This is included in 
 @optional
 // When a touch is detected, it will be passed to this function and provided via 'point'.
 -(void) receiveTouchAtPoint:(CGPoint) point;
-// Called when the keyplane changes. Can either be: @"Letters" or @"Numbers" or @"Emoji".
+// Called when the keyplane changes. Can either be: @"Letters" or @"Numbers" or @"Emoji" or @"NumberPad".
 -(void) keyPlaneDidChange:(NSString*) keyPlaneName;
 // Called when the keyplane changes. This is the raw value used by iOS internally, so may give more information.
 -(void) rawKeyPlaneDidChange:(NSString*) keyPlaneName;
