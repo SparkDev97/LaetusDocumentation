@@ -96,10 +96,10 @@ Notched 2x Devices (e.g. XR, 11):
 
 Non-Notched 'Plus' Devices (e.g. 7 Plus, 8 Plus):
     Screen Height: 667
-    Main BG Portrait @3x: TODO
-    Main BG Landscape @3x: TODO
-    Prediction Bar BG Portrait @3x: TODO
-    Prediction Bar BG Landscape @3x: TODO
+    Main BG Portrait @3x: 1242 x 678
+    Main BG Landscape @3x: 2208 x 492
+    Prediction Bar BG Portrait @3x: 1242 x 135
+    Prediction Bar BG Landscape @3x: 2208 x 114
 
 Non-Notched 2x Devices (e.g. 7, 8):
     Screen Height: 667
