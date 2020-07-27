@@ -70,6 +70,14 @@ Images can be provided with a scale also (remember to scale the image appropriat
 KeyboardLettersKeyPlanePortrait-en_GB-812h@3x.png
 ```
 
+All images can also be prefixed with an application bundle identifier, in order to give the ability to set images for a specific app.
+This would look like so:
+```
+com.apple.MobileSMS-KeyboardLettersKeyPlanePortrait-en_GB-812h@3x.png
+OR
+com.apple.MobileSMS-KeyboardLettersKeyPlanePortrait@3x.png
+```
+
 ### Image Theme Sizes
 The best sizes will differ from device to device, particularly for the keyplanes (Which may also differ across languages).
 
