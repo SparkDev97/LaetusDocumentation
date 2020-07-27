@@ -41,7 +41,8 @@ KeyboardLettersKeyPlane - This image is used on the letters screen, above the ba
 KeyboardNumbersKeyPlane - This image is used on the numbers screen, above the background (The backgrounds behind the key letters).
 KeyboardNumberPadKeyPlane - This image is used on the number pad screen, above the background (The backgrounds behind the key letters).
 KeyboardPressedKeyCap - This image is used behind the key popup when tapping on a key (Experimental).
-KeyboardAutoFillBG - This image is used as the background behind the login auto fill screen
+KeyboardAutoFillBG - This image is used as the background behind the login auto fill screen. (If not provided KeyboardMainBG is used).
+KeyboardPickerBG - This image is used as the background behind the 'picker' view (If not provided KeyboardMainBG is used).
 ```
 
 ### Image Theme Name Formatting
@@ -90,8 +91,8 @@ Notched 'Max' Devices (e.g. XS Max, 11 Pro Max):
     Main BG Landscape @3x: 2688 x 513
     Prediction Bar BG Portrait @3x: 1242 x 135
     Prediction Bar BG Landscape @3x: 1986 x 114
-    AutoFill BG Portrait @3x: 1242 x 561
-    AutoFill BG Landscape @3x: 2688 x 519
+    AutoFill/Picker BG Portrait @3x: 1242 x 561
+    AutoFill/Picker BG Landscape @3x: 2688 x 519
 
 Notched 3x Devices (e.g. X, 11 Pro):
     Screen Height: 812
@@ -99,8 +100,8 @@ Notched 3x Devices (e.g. X, 11 Pro):
     Main BG Landscape @3x: 2436 x 627
     Prediction Bar BG Portrait @3x: 1125 x 135
     Prediction Bar BG Landscape @3x: 2436 x 114
-    AutoFill BG Portrait @3x: (Unknown - Create a pull request to add!)
-    AutoFill BG Landscape @3x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Portrait @3x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Landscape @3x: (Unknown - Create a pull request to add!)
 
 Notched 2x Devices (e.g. XR, 11):
     Screen Height: 812
@@ -108,8 +109,8 @@ Notched 2x Devices (e.g. XR, 11):
     Main BG Landscape @2x: 1792 x 342
     Prediction Bar BG Portrait @2x: 828 x 90
     Prediction Bar BG Landscape @2x: 1792 x 76
-    AutoFill BG Portrait @2x: (Unknown - Create a pull request to add!)
-    AutoFill BG Landscape @2x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Portrait @2x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Landscape @2x: (Unknown - Create a pull request to add!)
 
 Non-Notched 'Plus' Devices (e.g. 7 Plus, 8 Plus):
     Screen Height: 667
@@ -117,8 +118,8 @@ Non-Notched 'Plus' Devices (e.g. 7 Plus, 8 Plus):
     Main BG Landscape @3x: 2208 x 492
     Prediction Bar BG Portrait @3x: 1242 x 135
     Prediction Bar BG Landscape @3x: 2208 x 114
-    AutoFill BG Portrait @3x: (Unknown - Create a pull request to add!)
-    AutoFill BG Landscape @3x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Portrait @3x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Landscape @3x: (Unknown - Create a pull request to add!)
 
 Non-Notched 2x Devices (e.g. 7, 8):
     Screen Height: 667
@@ -126,8 +127,8 @@ Non-Notched 2x Devices (e.g. 7, 8):
     Main BG Landscape @2x: 1334 x 328
     Prediction Bar BG Portrait @2x: 750 x 88
     Prediction Bar BG Landscape @2x: 1334 x 76
-    AutoFill BG Portrait @2x: (Unknown - Create a pull request to add!)
-    AutoFill BG Landscape @2x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Portrait @2x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Landscape @2x: (Unknown - Create a pull request to add!)
 
 Non-Notched Small 2x Devices (e.g. SE-1):
     Screen Height: 568
@@ -135,8 +136,8 @@ Non-Notched Small 2x Devices (e.g. SE-1):
     Main BG Landscape @2x: 1136 x 404
     Prediction Bar BG Portrait @2x: 640 x 76
     Prediction Bar BG Landscape @2x: 1136 x 76
-    AutoFill BG Portrait @2x: (Unknown - Create a pull request to add!)
-    AutoFill BG Landscape @2x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Portrait @2x: (Unknown - Create a pull request to add!)
+    AutoFill/Picker BG Landscape @2x: (Unknown - Create a pull request to add!)
 ```
 
 I will be putting together an example pack containing empty images for all of these sizes very soon.
