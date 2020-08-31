@@ -17,6 +17,8 @@
 -(void) rawKeyPlaneDidChange:(NSString*) keyPlaneName;
 // Called when the language changes. Language is provided directly from the keyboard APIs and appears to always conform to the ISO language standard (e.g. en_GB). - More information here (https://en.wikipedia.org/wiki/Language_localisation), note that hyphens will be returned as underscores. 
 -(void) updateCurrentLanguage:(NSString*) language;
+// Called to inform the widget of which languages are available. These are the languages shown when tapping the globe icon in the keyboard.
+-(void) setEnabledLanguages:(NSArray*) languages;
 // Called when the dictation view shows.
 -(void) dictationViewWillShow;
 // Called when the dication view hides.
