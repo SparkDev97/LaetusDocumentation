@@ -186,7 +186,8 @@ All callbacks are option and do not need to be overridden in your theme.
 
 The callbacks are as follows:
 ```
-laetusKeyPlaneDidChange(state) - Called when the keyboard becomes visible or the keyboards 'KeyPlane' changes. The possible states are: "Letters", "Numbers", "Emoji", "NumberPad".
+laetusKeyPlaneDidChange(state) - Called when the keyboard becomes visible or the keyboards 'KeyPlane' changes. The possible states are: "Letters", "CapitalLetters", "Numbers", "Emoji", "NumberPad".
+laetusRawKeyPlaneDidChange(state) - Called when the keyplane changes. This is the raw value used by iOS internally, so may give more information.
 
 laetusDictationViewWillShow() - Called when the dictation view appears
 laetusDictationViewWillHide() - Called when the dictation view disappears
@@ -245,7 +246,7 @@ Laetus widgets must conform to the 'LaetusWidget' protocol. This is included in 
 @optional
 // When a touch is detected, it will be passed to this function and provided via 'point'.
 -(void) receiveTouchAtPoint:(CGPoint) point;
-// Called when the keyplane changes. Can either be: @"Letters" or @"Numbers" or @"Emoji" or @"NumberPad".
+// Called when the keyplane changes. Can either be: @"Letters" or @"CapitalLetters" or @"Numbers" or @"Emoji" or @"NumberPad".
 -(void) keyPlaneDidChange:(NSString*) keyPlaneName;
 // Called when the keyplane changes. This is the raw value used by iOS internally, so may give more information.
 -(void) rawKeyPlaneDidChange:(NSString*) keyPlaneName;
