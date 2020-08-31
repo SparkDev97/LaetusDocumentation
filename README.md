@@ -195,6 +195,8 @@ laetusDictationViewWillHide() - Called when the dictation view disappears
 laetusDidTouchDown(x,y) - Called when the user taps on the keyboard. Provides the x,y position relative the view. (e.g. 0,0 for the top left).
 
 laetusCurrentLanguage(language) - Called when the keyboard becomes visible or when the language changes. Language is provided directly from the keyboard APIs and appears to always conform to the ISO language standard (e.g. en_GB). - More information here (https://en.wikipedia.org/wiki/Language_localisation), note that hyphens will be returned as underscores. 
+
+laetusEnabledLanguages(languagesArray) - Called whenever the other notifications are updated. Just includes an array of the languages enabled by the user. These are the languages shown when tapping the globe icon in the keyboard. (Again the ISO language key).
 ```
 
 An example of overriding one of these methods would look as follows, from the "Example.js" file:
