@@ -207,6 +207,14 @@ function laetusKeyPlaneDidChange(keyplaneName)
 }
 ```
 
+Or you could get the element at the current position like so:
+```
+function laetusDidTouchDown(x, y)
+{
+    var elem = document.elementFromPoint(x, y);
+}
+```
+
 ### HTML Theme Format
 As with all Laetus themes, the theme should be a folder in ```/Library/Laetus/Themes```.
 Files for the theme must be stored in a sub-folder called ```HTML```
